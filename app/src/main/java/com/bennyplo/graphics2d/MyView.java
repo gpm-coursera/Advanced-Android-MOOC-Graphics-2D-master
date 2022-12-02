@@ -33,8 +33,9 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //Add your drawing code here
-        canvas.drawRect(10,30,200,200,redPaint);
+        //canvas.drawRect(10,30,200,200,redPaint);
 
         canvas.drawCircle(300,300,250,bluePaint);
+        canvas.drawCircle(500,450,50,redPaint);
     }
 }
