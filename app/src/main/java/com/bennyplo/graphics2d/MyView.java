@@ -78,7 +78,9 @@ public class MyView extends View {
         //Add your drawing code here
         canvas.drawRect(500,500,700,700,redPaint);
 
-        canvas.drawCircle(600,600,145,redPaint);
+        int cx = (50+160+300+380+280+100+160+50)/8;
+        int cy = (300+280+380+370+450+390+380+300)/8;
+        canvas.drawCircle(cx,cy,250,redPaint);
         //canvas.drawCircle(500,450,50,redPaint);
 
         canvas.drawPath(mylines, greenPaint);
