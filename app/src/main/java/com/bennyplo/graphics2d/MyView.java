@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Color;
 import android.view.View;
 
 /**
@@ -14,6 +15,8 @@ public class MyView extends View {
     private Paint redPaint;
     private Paint bluePaint;
     private Paint greenPaint;
+    private Paint redfillPaint;
+    private Paint blackPaint;
     private Path mylines;
 
 
@@ -32,6 +35,16 @@ public class MyView extends View {
 
         greenPaint = new Paint();
         greenPaint.setARGB(255,0,255,0);
+
+        redfillPaint = new Paint();
+        redfillPaint.setStyle(Paint.Style.FILL);
+        redfillPaint.setARGB(255,255,0,0);
+
+        blackPaint = new Paint();
+        blackPaint.setStyle(Paint.Style.STROKE);
+        blackPaint.setColor(Color.BLACK);
+
+
 
         mylines =new Path();
         /*
@@ -83,6 +96,8 @@ public class MyView extends View {
         canvas.drawCircle(cx,cy,250,redPaint);
         //canvas.drawCircle(500,450,50,redPaint);
 
-        canvas.drawPath(mylines, greenPaint);
+        //canvas.drawPath(mylines, greenPaint);
+        canvas.drawPath(mylines, redfillPaint);
+        canvas.drawPath(mylines, blackPaint);
     }
 }
